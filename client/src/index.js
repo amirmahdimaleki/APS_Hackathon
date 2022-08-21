@@ -3,11 +3,24 @@ import ReactDOM from "react-dom/client";
 import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import { ThemeProvider as ContextThemeProvider } from "./context/ThemeContext";
+import { Provider } from "react-redux";
+import store from "./redux/store";
+
+const initialState = {
+  app: {
+    gridDefaultPage: {},
+  },
+};
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store(initialState)}>
+      <ContextThemeProvider>
+        <App />
+      </ContextThemeProvider>
+    </Provider>
   </React.StrictMode>
 );
 

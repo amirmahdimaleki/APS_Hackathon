@@ -3,16 +3,9 @@ import Header from "./components/Header";
 import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { useTheme } from "./context/ThemeContext";
-import { ThemeProvider as ContextThemeProvider } from "./context/ThemeContext";
-import store from "./redux/store";
-import { Provider } from "react-redux";
 import { BrowserRouter as Router } from "react-router-dom";
-
-const initialState = {
-  app: {
-    gridDefaultPage: {},
-  },
-};
+import PageNotFound from "./pages/PageNotFound";
+import RoutesContainer from "./RouterContainer";
 
 export default function App() {
   const darkMode = useTheme();
@@ -31,16 +24,13 @@ export default function App() {
   );
 
   return (
-    <Provider store={store(initialState)}>
-      <ContextThemeProvider>
-        <ThemeProvider theme={theme}>
-          <Router>
-            <Header />
-            <CssBaseline />
-            {/* <Routes /> */}
-          </Router>
-        </ThemeProvider>
-      </ContextThemeProvider>
-    </Provider>
+    <ThemeProvider theme={theme}>
+      {/* <Router> */}
+      <Header />
+      <CssBaseline />
+      {/* <PageNotFound /> */}
+      {/* <RoutesContainer /> */}
+      {/* </Router> */}
+    </ThemeProvider>
   );
 }

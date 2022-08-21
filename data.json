@@ -1,0 +1,366 @@
+[
+  {
+    "members": [
+      {
+        "teachers": [
+          {
+            "id": "number",
+            "email": "string",
+            "username": "string",
+            "password": "string",
+            "location": "string"
+          }
+        ],
+        "coTeachers": [
+          {
+            "id": "number",
+            "email": "string",
+            "username": "string",
+            "password": "string",
+            "location": "string"
+          }
+        ],
+        "assisstants": [
+          {
+            "id": "number",
+            "email": "string",
+            "username": "string",
+            "password": "string",
+            "location": "string"
+          }
+        ],
+        "students": [
+          {
+            "id": "number",
+            "email": "string",
+            "username": "string",
+            "password": "string",
+            "location": "string"
+          }
+        ]
+      }
+    ],
+
+    "homeworks": [
+      {
+        "id": "5555",
+        "homeworkTitle": "string",
+        "member": [
+          {
+            "members.students": [
+              {
+                "id": "235",
+                "uId":"8520369741123",
+                "email": "string",
+                "username": "string",
+                "password": "string",
+                "location": "string"
+              },
+              {
+                "id": "664",
+                "uId": "3628740123345",
+                "email": "string",
+                "username": "string",
+                "password": "string",
+                "location": "string"
+              }
+            ]
+          }
+        ],
+        "author":[
+            {
+                "members.teachers":[{
+                  "id": "384",
+                  "uId": "3628740120001",
+                  "email": "string",
+                  "username": "string",
+                  "password": "string",
+                  "location": "string"
+                }],
+                "members.coTeachers":[{
+                  "id": "964",
+                  "uId": "36200000000345",
+                  "email": "string",
+                  "username": "string",
+                  "password": "string",
+                  "location": "string"
+                }]
+            }
+        ],
+        "type": "quizz",
+        "dueDate": "numbers",
+        "descriptin": "string",
+        "attachment": {
+          "attachmentNumber": "number",
+          "url": "string",
+          "file": {
+            "ownLib": "bool",
+            "centralLib": "bool"
+          }
+        },
+        "create": {
+          "text": "string"
+        },
+        "save": {
+          "lib": "bool"
+        },
+        "turnIn": "bool",
+        "grade": "number",
+        "totGrade": "number",
+        "resubmissinReq": "bool"
+      }
+    ],
+
+    "calendars": [
+      {
+        "id": "222",
+        "summary": "string",
+        "description": "string",
+        "location": "string",
+        "timeZone": "string",
+        "hidden": "bool",
+        "selected": "bool",
+        "deleted": "bool",
+        "access_role": "string",
+        "defaultReminders": [
+          {
+            "method": "string",
+            "minutes": "number"
+          }
+        ],
+        "notificationSettings": {
+          "notifications": [
+            {
+              "type": "string",
+              "method": "string"
+            }
+          ]
+        }
+      }
+    ],
+
+    "folders": [
+      {
+        "id": "number",
+        "folderName": "string"
+      }
+    ],
+
+    "classrooms": [
+      {
+        "id": "number",
+        "classroom_name": "string",
+        "classroom_type": "adult_edu",
+        "description": "string",
+        "code_url": "string",
+        "classroomMembers": [
+          {
+            "teachers": [
+              {
+                "extended": false,
+                "id": "58",
+                "email": "yaser@gmail.com",
+                "username": "yaser",
+                "password": "nvksjsvmos",
+                "location": "Japan"
+              },
+              {
+                "extended": true,
+                "id": "74",
+                "uId": "1237894560",
+                "email": "jasem@gmail.com",
+                "username": "jasen",
+                "password": "jfdkjns556dskf",
+                "location": "France"
+              }
+            ],
+            "coTeachers": [
+              {
+                "extended": true,
+                "uId": "1478520963",
+                "id": "825",
+                "email": "mozaffar@gmail.com",
+                "username": "mozaffar",
+                "password": "cj14dnmd35p",
+                "location": "Russia"
+              },
+              {
+                "extended": false,
+                "id": "128",
+                "email": "kazem@gmail.com",
+                "username": "kazem",
+                "password": "snbdq222",
+                "location": "Turkey"
+              }
+            ],
+            "assisstant": [
+              {
+                "extended": false,
+                "uId": "125215340",
+                "id": "1605",
+                "email": "farangis@gmail.com",
+                "username": "farangis",
+                "password": "10kdkkdmkf",
+                "location": "Iran"
+              },
+              {
+                "extended": false,
+                "id": "1108",
+                "email": "qazanfar@gmail.com",
+                "username": "qazanfar",
+                "password": "zaxscdvf23yg",
+                "location": "Iraq"
+              }
+            ],
+            "students": [
+              {
+                "extended": true,
+                "uId": "68423510",
+                "id": "825",
+                "email": "monnely@gmail.com",
+                "username": "monnely",
+                "password": "fdhdkdldkd",
+                "location": "The US"
+              },
+              {
+                "extended": true,
+                "uId": "7531590",
+                "id": "378",
+                "email": "caroline@gmail.com",
+                "username": "caroline",
+                "password": "polikujyht",
+                "location": "Italy"
+              }
+            ]
+          }
+        ],
+
+        "classroomHomework": [
+          {
+            "extended": true,
+            "id": "5555",
+            "uId": "211654165132542214",
+            "type": "assignment",
+            "assignedClassroom": [
+              {
+                "homeworkType": "adult_edu",
+                "id": "number"
+              }
+            ],
+            "edited": true,
+            "turnIn": true,
+            "grade": "100",
+            "totGrade": "100"
+          },
+          {
+            "extended": false,
+            "id": "4444",
+            "homeworkTitle": "string",
+            "member": ["student1, student2, student3"],
+            "author": "co-teacher",
+            "type": "quizz",
+            "dueDate": "bool",
+            "descriptin": "string",
+            "attachment": {
+              "attachmentNumber": "number",
+              "url": "string",
+              "file": {
+                "ownLib": "bool",
+                "centralLib": "bool"
+              }
+            },
+            "create": {
+              "text": "string"
+            },
+            "save": {
+              "lib": "bool"
+            },
+            "turnIn": false,
+            "grade": "number",
+            "totGrade": "number",
+            "resubmissinReq": "bool"
+          }
+        ],
+        "classroomCalendar": [
+          {
+            "extended": true,
+            "id": "55",
+            "summary": "string",
+            "description": "string",
+            "location": "Iran",
+            "timeZone": "GMT(+4:30)",
+            "hidden": false,
+            "selected": true,
+            "deleted": false,
+            "access_role": "members.students",
+            "defaultReminders": [
+              {
+                "method": "string",
+                "minutes": "number"
+              }
+            ],
+            "notificationSettings": {
+              "notifications": [
+                {
+                  "type": "string",
+                  "method": "string"
+                }
+              ]
+            }
+          },
+          {
+            "extended": false,
+            "id": "111",
+            "summary": "string",
+            "description": "string",
+            "location": "USA",
+            "timeZone": "GMT(-4)",
+            "hidden": true,
+            "selected": false,
+            "deleted": false,
+            "access_role": "string",
+            "defaultReminders": [
+              {
+                "method": "string",
+                "minutes": "number"
+              }
+            ],
+            "notificationSettings": {
+              "notifications": [
+                {
+                  "type": "string",
+                  "method": "string"
+                }
+              ]
+            }
+          }
+        ],
+        "studentProgress": [
+          {
+            "studentUsername": "student1",
+            "homeworkTitle": "quizz",
+            "grade": "80"
+          },
+          {
+            "studentUsername": "student2",
+            "homeworkTitle": "assignment3",
+            "grade": "98",
+            "edited": false
+          }
+        ],
+
+        "classroomFolder": [
+          {
+            "extended": true,
+            "id": "2050",
+            "folderName": "booklets",
+            "edited": false,
+            "deleted": false
+          }
+        ],
+
+        "comments": [{}]
+      }
+    ]
+  }
+]

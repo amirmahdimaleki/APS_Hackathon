@@ -13,10 +13,10 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    display: "none",
-    [theme.breakpoints.up("sm")]: {
-      display: "block",
-    },
+    // display: "none",
+    // [theme.breakpoints.up("sm")]: {
+    display: "block",
+    // },
   },
   search: {
     position: "relative",
@@ -63,7 +63,7 @@ export default function Header() {
   const classes = useStyles();
   const darkMode = useTheme();
   const toggleTheme = useThemeUpdate();
-  const nodeRef = useRef(null);
+  // const nodeRef = useRef(null);
   const [anchorEl, setAnchorEl] = useState(null);
   const [mobileMoreAnchorEl, setMobileMoreAnchorEl] = useState(null);
 
@@ -90,7 +90,7 @@ export default function Header() {
       anchorEl={anchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={menuId}
-      noderef={nodeRef}
+      // noderef={nodeRef}
       keepMounted
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMenuOpen}
@@ -107,7 +107,7 @@ export default function Header() {
       anchorEl={mobileMoreAnchorEl}
       anchorOrigin={{ vertical: "top", horizontal: "right" }}
       id={mobileMenuId}
-      noderef={nodeRef}
+      // noderef={nodeRef}
       keepMounted
       transformOrigin={{ vertical: "top", horizontal: "right" }}
       open={isMobileMenuOpen}
@@ -165,6 +165,7 @@ export default function Header() {
             aria-label='account of current user'
             aria-controls={menuId}
             aria-haspopup='true'
+            // noderef={nodeRef}
             onClick={handleProfileMenuOpen}
             color='inherit'
           >

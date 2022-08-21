@@ -15,13 +15,9 @@ export const appSlice = createSlice({
         state.gridDefaultPage = {};
       } else state.gridDefaultPage[action.payload.key] = action.payload.page;
     },
-    incrementByAmount: (state, action) => {
-      state.value += action.payload;
-    },
   },
 });
 
-// Action creators are generated for each case reducer function
-export const { setVisualViewportWidth, setGridDefaultPage, incrementByAmount } = appSlice.actions;
+export const { setVisualViewportWidth, setGridDefaultPage } = appSlice.actions;
 
 export default appSlice.reducer;

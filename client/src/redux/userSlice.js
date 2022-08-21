@@ -6,6 +6,7 @@ export const userSlice = createSlice({
     // avatar: null,
     // account: null,
     id: null,
+    members: [],
     roles: [],
     classrooms: [],
     jwt: "",
@@ -13,19 +14,21 @@ export const userSlice = createSlice({
   reducers: {
     setRole: (state, { payload }) => {
       if (!state.roles.role) {
-        state.roles = payload.roles;
+        state.roles = payload;
       }
     },
     setJWT: (state, { payload }) => {
       if (payload) state.jwt = payload;
     },
     setClassrooms: (state, { payload }) => {
-      if (state.classrooms.classroom) state.classrooms = payload.classrooms;
+      if (state.classrooms.classroom) state.classrooms = payload;
+    },
+    setMembers: (state, { payload }) => {
+      if (state.members) state.members = payload;
     },
   },
 });
 
-// Action creators are generated for each case reducer function
 export const { setClassrooms, setJWT, setRole } = userSlice.actions;
 
 export default userSlice.reducer;
