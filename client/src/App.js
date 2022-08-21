@@ -25,12 +25,11 @@ export default function App() {
 
   return (
     <ThemeProvider theme={theme}>
-      {/* <Router> */}
-      <Header />
-      <CssBaseline />
-      {/* <PageNotFound /> */}
-      {/* <RoutesContainer /> */}
-      {/* </Router> */}
+      <Router>
+        <Header />
+        <CssBaseline />
+        <RoutesContainer />
+      </Router>
     </ThemeProvider>
   );
 }
