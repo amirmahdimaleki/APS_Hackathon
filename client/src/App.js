@@ -15,6 +15,10 @@ export default function App() {
       createTheme({
         palette: {
           type: darkMode === "dark" ? "dark" : "light",
+          aps: {
+            primary: "#41B1A1",
+            secondary: "#BD3A1C"
+          }
         },
         typography: {
           fontFamily: ["Adobe Gothic std B", "sans-serif", '"Apple Color Emoji"', '"Segoe UI Emoji"', '"Segoe UI Symbol"'].join(","),
