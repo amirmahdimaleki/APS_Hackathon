@@ -1,8 +1,15 @@
 import { useRef, useState } from "react";
 import { useTheme, useThemeUpdate } from "../context/ThemeContext";
 import { alpha, makeStyles } from "@material-ui/core/styles";
-import { AppBar, Toolbar, IconButton, Typography, Badge, MenuItem, Menu } from "@material-ui/core";
-import { Menu as MenuIcon, AccountCircle, Mail as MailIcon, Notifications as NotificationsIcon, MoreVert as MoreIcon } from "@material-ui/icons";
+import { AppBar, Toolbar, IconButton, Typography, Badge, MenuItem, Menu, InputBase } from "@material-ui/core";
+import {
+  Menu as MenuIcon,
+  AccountCircle,
+  Mail as MailIcon,
+  Notifications as NotificationsIcon,
+  MoreVert as MoreIcon,
+  Search as SearchIcon,
+} from "@material-ui/icons";
 import DarkModeSwitch from "./utilities/DarkModeSwitch";
 
 const useStyles = makeStyles(theme => ({
@@ -13,10 +20,19 @@ const useStyles = makeStyles(theme => ({
     marginRight: theme.spacing(2),
   },
   title: {
-    // display: "none",
-    // [theme.breakpoints.up("sm")]: {
-    display: "block",
-    // },
+    display: "none",
+    [theme.breakpoints.up("sm")]: {
+      display: "block",
+    },
+  },
+  searchIcon: {
+    padding: theme.spacing(0, 2),
+    height: "100%",
+    position: "absolute",
+    pointerEvents: "none",
+    display: "flex",
+    alignItems: "center",
+    justifyContent: "center",
   },
   search: {
     position: "relative",
@@ -148,6 +164,19 @@ export default function Header() {
           APSignals
         </Typography>
         <div className={classes.grow} />
+        <div className={classes.search}>
+          <div className={classes.searchIcon}>
+            <SearchIcon />
+          </div>
+          <InputBase
+            placeholder='Search…'
+            classes={{
+              root: classes.inputRoot,
+              input: classes.inputInput,
+            }}
+            inputProps={{ "aria-label": "search" }}
+          />
+        </div>
         <DarkModeSwitch mode={darkMode} onChange={toggleTheme} />
         <div className={classes.sectionDesktop}>
           <IconButton aria-label='show 4 new mails' color='inherit'>
