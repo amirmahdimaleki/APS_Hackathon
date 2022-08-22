@@ -1,4 +1,4 @@
-import { useRef, useState } from "react";
+import { useState } from "react";
 import { useTheme, useThemeUpdate } from "../context/ThemeContext";
 import { alpha, makeStyles } from "@material-ui/core/styles";
 import { AppBar, Toolbar, IconButton, Typography, Badge, MenuItem, Menu, InputBase } from "@material-ui/core";

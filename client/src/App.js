@@ -4,8 +4,8 @@ import { createTheme, ThemeProvider } from "@material-ui/core/styles";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import { useTheme } from "./context/ThemeContext";
 import { BrowserRouter as Router } from "react-router-dom";
-import PageNotFound from "./pages/PageNotFound";
 import RoutesContainer from "./RouterContainer";
+import ClassHomePage from "./pages/ClassHomePage";
 
 export default function App() {
   const darkMode = useTheme();
@@ -28,6 +28,7 @@ export default function App() {
       <Router>
         <Header />
         <CssBaseline />
+        <ClassHomePage />
         <RoutesContainer />
       </Router>
     </ThemeProvider>
