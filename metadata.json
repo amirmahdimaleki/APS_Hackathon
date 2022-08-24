@@ -12,41 +12,84 @@
                         "backgroundColor": "something which is not default",
                         "searchBar": true,
                         "size": "titleWidgetSize",
-                        "title": {
-                            "title": "My Title",
-                            "titleVariance": "h1",
-                            "titleMenuItems": [
-                                {
-                                    "menuTitle": "Class",
-                                    "button": true,
-                                    "type": "dropdown",
-                                    "action": false,
-                                    "menuItems": [
+                        "border": {
+                            "borderTop": true,
+                            "variant": "primary"
+                        },
+                        "header": {
+                            "headerSectionLeft": {
+                                "title": {
+                                    "title": "My Title",
+                                    "titleVariance": "h1",
+                                    "titleMenuItems": [
                                         {
-                                            "item": "item 1",
-                                            "action": {
-                                                "payload": {
-                                                    "data": "",
-                                                    "url": "url"
+                                            "type": "dropdown",
+                                            "label": "Class",
+                                            "menuItems": [
+                                                {
+                                                    "item": "item 1",
+                                                    "action": {
+                                                        "payload": {
+                                                            "data": "",
+                                                            "url": "url"
+                                                        },
+                                                        "method": "POST"
+                                                    }
                                                 },
-                                                "method": "POST"
-                                            }
+                                                {
+                                                    "type": "label",
+                                                    "label": "Late",
+                                                    "button": false
+                                                }
+                                            ]
                                         }
-                                    ]
+                                    ],
+                                    "subTitles": {
+                                        "variant": "horizontal",
+                                        "subTitlesMenu": [
+                                            {
+                                                "type": "dropdown",
+                                                "label": "Description",
+                                                "menuItems": [
+                                                    {
+                                                        "item": "item 1",
+                                                        "action": {
+                                                            "payload": {
+                                                                "data": "",
+                                                                "url": "url"
+                                                            },
+                                                            "method": "POST"
+                                                        }
+                                                    }
+                                                ]
+                                            },
+                                            {
+                                                "type": "label",
+                                                "label": "Description",
+                                                "button": true,
+                                                "action": {
+                                                    "payload": {
+                                                        "data": "",
+                                                        "url": "url"
+                                                    },
+                                                    "method": "POST"
+                                                }
+                                            }
+                                        ]
+                                    }
                                 },
-                                {
-                                    "menuTitles": "Late",
-                                    "button": false
+                                "profile": {
+                                    "profileImage": "url",
+                                    "profileName": "My Name",
+                                    "profileSubName": "My Class"
                                 }
-                            ],
-                            "subTitles": {
-                                "variant": "horizontal",
-                                "subTitlesMenu": [
+                            },
+                            "headerSectionRight": {
+                                "xButton": true,
+                                "children": [
                                     {
-                                        "subtitle": "Description",
-                                        "button": true,
-                                        "type": "dropdown",
-                                        "action": false,
+                                        "type": "more",
+                                        "variant": "moreHoriz",
                                         "menuItems": [
                                             {
                                                 "item": "item 1",
@@ -61,9 +104,9 @@
                                         ]
                                     },
                                     {
-                                        "subtitle": "Description",
-                                        "button": true,
                                         "type": "button",
+                                        "submitButton": true,
+                                        "buttonName": "Next",
                                         "action": {
                                             "payload": {
                                                 "data": "",
@@ -75,32 +118,38 @@
                                 ]
                             }
                         },
-                        "profile": {
-                            "profileImage": "url",
-                            "profileName": "My Name",
-                            "profileSubName": "My Class"
-                        },
-                        "border": {
-                            "borderTop": true,
-                            "variant": "primary"
-                        },
-                        "button": {
-                            "xButton": true,
-                            "submitButton": true,
-                            "buttonName": "Next",
-                            "action": {
-                                "payload": {
-                                    "data": "",
-                                    "url": "url"
-                                },
-                                "method": "POST"
-                            }
-                        },
-                        "more": {
-                            "type": "moreHoriz",
-                            "menuItems": [
+                        "body": {
+                            "type": "form",
+                            "form": [
                                 {
-                                    "item": "item 1",
+                                    "type": "input",
+                                    "label": "Name",
+                                    "placeholder": "write your name in this input"
+                                },
+                                {
+                                    "type": "dropdown",
+                                    "label": "Select Subject",
+                                    "placeholder": "anything",
+                                    "menuItems": [
+                                        {
+                                            "item": "item 1",
+                                            "action": {
+                                                "payload": {
+                                                    "data": "",
+                                                    "url": "url"
+                                                },
+                                                "method": "POST"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "label": "Instruction",
+                                    "type": "text",
+                                    "placeholder": "write your instruction here"
+                                },
+                                {
+                                    "type": "button",
                                     "action": {
                                         "payload": {
                                             "data": "",
@@ -110,6 +159,59 @@
                                     }
                                 }
                             ]
+                        },
+                        "footer": {
+                            "footerSectionLeft": {
+                                "type": "listHoriz",
+                                "children": [
+                                    {
+                                        "type": "button",
+                                        "variant": "imgBtn",
+                                        "img": "attachment",
+                                        "action": {
+                                            "payload": {
+                                                "data": "",
+                                                "url": "url"
+                                            },
+                                            "method": "POST"
+                                        }
+                                    },
+                                    {
+                                        "type": "button",
+                                        "variant": "imgBtn",
+                                        "img": "link",
+                                        "action": {
+                                            "payload": {
+                                                "data": "",
+                                                "url": "url"
+                                            },
+                                            "method": "POST"
+                                        }
+                                    }
+                                ]
+                            },
+                            "footerSectionRight": {
+                                "type": "vertList",
+                                "children": [
+                                    {
+                                        "type": "button",
+                                        "submitButton": true,
+                                        "buttonName": "Create",
+                                        "color": "secondary",
+                                        "action": {
+                                            "payload": {
+                                                "data": "",
+                                                "url": "url"
+                                            },
+                                            "method": "POST"
+                                        }
+                                    },
+                                    {
+                                        "type": "checkbox",
+                                        "label": "Remember me"
+                                    }
+                                ]
+                            }
                         }
                     }
                 }
