@@ -1,0 +1,119 @@
+{
+    "pages": [
+        {
+            "page": "home",
+            "route": "/",
+            "children": [
+                {
+                    "type": "widget",
+                    "id": "1234321234",
+                    "uid": "due to this make some CSS unique change",
+                    "layout": {
+                        "backgroundColor": "something which is not default",
+                        "searchBar": true,
+                        "size": "titleWidgetSize",
+                        "title": {
+                            "title": "My Title",
+                            "titleVariance": "h1",
+                            "titleMenuItems": [
+                                {
+                                    "menuTitle": "Class",
+                                    "button": true,
+                                    "type": "dropdown",
+                                    "action": false,
+                                    "menuItems": [
+                                        {
+                                            "item": "item 1",
+                                            "action": {
+                                                "payload": {
+                                                    "data": "",
+                                                    "url": "url"
+                                                },
+                                                "method": "POST"
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "menuTitles": "Late",
+                                    "button": false
+                                }
+                            ],
+                            "subTitles": {
+                                "variant": "horizontal",
+                                "subTitlesMenu": [
+                                    {
+                                        "subtitle": "Description",
+                                        "button": true,
+                                        "type": "dropdown",
+                                        "action": false,
+                                        "menuItems": [
+                                            {
+                                                "item": "item 1",
+                                                "action": {
+                                                    "payload": {
+                                                        "data": "",
+                                                        "url": "url"
+                                                    },
+                                                    "method": "POST"
+                                                }
+                                            }
+                                        ]
+                                    },
+                                    {
+                                        "subtitle": "Description",
+                                        "button": true,
+                                        "type": "button",
+                                        "action": {
+                                            "payload": {
+                                                "data": "",
+                                                "url": "url"
+                                            },
+                                            "method": "POST"
+                                        }
+                                    }
+                                ]
+                            }
+                        },
+                        "profile": {
+                            "profileImage": "url",
+                            "profileName": "My Name",
+                            "profileSubName": "My Class"
+                        },
+                        "border": {
+                            "borderTop": true,
+                            "variant": "primary"
+                        },
+                        "button": {
+                            "xButton": true,
+                            "submitButton": true,
+                            "buttonName": "Next",
+                            "action": {
+                                "payload": {
+                                    "data": "",
+                                    "url": "url"
+                                },
+                                "method": "POST"
+                            }
+                        },
+                        "more": {
+                            "type": "moreHoriz",
+                            "menuItems": [
+                                {
+                                    "item": "item 1",
+                                    "action": {
+                                        "payload": {
+                                            "data": "",
+                                            "url": "url"
+                                        },
+                                        "method": "POST"
+                                    }
+                                }
+                            ]
+                        }
+                    }
+                }
+            ]
+        }
+    ]
+}
