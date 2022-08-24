@@ -1,0 +1,27 @@
+{
+    "layout": [
+        {
+            "data": "query to load data for this layout",
+            "page": "home",
+            "route": "/",
+            "widgets": [
+                {
+                    "name": "homeHeader",
+                    "version": "1.0.0",
+                    "size": {
+                        "width": "12rem",
+                        "height": "4rem"
+                    }
+                },
+                {
+                    "name": "homeStudentBody",
+                    "version": "1.0.0",
+                    "size": {
+                        "width": "4rem",
+                        "height": "4rem"
+                    }
+                }
+            ]
+        }
+    ]
+}
