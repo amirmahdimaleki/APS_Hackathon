@@ -1,11 +1,13 @@
-import { useMemo } from "react";
-import Header from "./components/Header";
-import { createTheme, ThemeProvider } from "@material-ui/core/styles";
+import { ThemeProvider, createTheme } from "@material-ui/core/styles";
+
+import ClassHomePage from "./pages/ClassHomePage";
 import CssBaseline from "@material-ui/core/CssBaseline";
-import { useTheme } from "./context/ThemeContext";
+import DatePicker from "./components/DatePicker"
+import Header from "./components/Header";
 import { BrowserRouter as Router } from "react-router-dom";
 import RoutesContainer from "./RouterContainer";
-import ClassHomePage from "./pages/ClassHomePage";
+import { useMemo } from "react";
+import { useTheme } from "./context/ThemeContext";
 
 export default function App() {
   const darkMode = useTheme();
@@ -34,6 +36,7 @@ export default function App() {
         <CssBaseline />
         <ClassHomePage />
         <RoutesContainer />
+        < DatePicker/>
       </Router>
     </ThemeProvider>
   );
