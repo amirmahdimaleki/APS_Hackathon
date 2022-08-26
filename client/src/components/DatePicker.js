@@ -1,10 +1,11 @@
 
 // imports
 
-import { Backdrop, Fade, Modal, Typography, makeStyles } from '@material-ui/core'
+import { Backdrop, Fade, Grid, IconButton, Modal, TextField, Typography, makeStyles } from '@material-ui/core'
 
 import CloseIcon from '@mui/icons-material/Close';
 import SquareIcon from '@mui/icons-material/Square';
+import { border } from '@mui/system';
 import { useState } from 'react';
 
 //* Styles
@@ -15,27 +16,32 @@ const useStyles = makeStyles(theme =>({
         justifyContent: 'center',
       },
       paper: {
+        minWidth:theme.spacing(30),
+        minHeight:theme.spacing(70),
+        [theme.breakpoints.up("sm")] :{
+            minWidth:theme.spacing(80)
+        },
         display: "flex",
         flexDirection:"column",
         // backgroundColor: theme.palette.background.paper,
         borderRadius:theme.spacing(1),
-        background: "#F2F2F1",
-        // boxShadow:  5px 5px 13px #cacaca,
-                    //  -5px -5px 13px #f6f6f6,
+        background: "#FFF",
         boxShadow: theme.shadows[5],
-        padding: theme.spacing(0, 2, 1),
+        padding: theme.spacing(1, 2, 1),
         // position: "relative"
       },
       logoHolder: {
         display: "flex",
-        position: "relative",
-        height: theme.spacing(5),
-        top: theme.spacing(0),
+        // position: "relative",
+        // justifyContent: "space-between",
+        height: theme.spacing(2),
+        width: theme.spacing(6)
+        // top: theme.spacing(10),
       },
       redSquare: {
         position: "absolute",
-        top:theme.spacing(1),
-        left: theme.spacing(2),
+        top:theme.spacing(0.25),
+        left: theme.spacing(1),
         // height: theme.spacing(2)
         color:"#BD3A1C",
       },
@@ -43,15 +49,41 @@ const useStyles = makeStyles(theme =>({
         color: "#41B1A1",
         zIndex : 10,
         position: "absolute",
-        top: theme.spacing(2),
-        left: theme.spacing(3),
+        top: theme.spacing(1.25),
+        left: theme.spacing(2),
       },
       icon: {
           borderRadius: theme.spacing(2)
       },
       modalHeader: {
-           display: "flex"
-      }
+           display: "flex",
+           justifyContent: "space-between",
+           position: "relative",
+      },
+      closeIcon: {
+        // marginLeft: theme.spacing(12)
+      },
+      iconBtn: {
+        top: theme.spacing(-1)
+      },
+      // assignBtn: {
+      //   color: 
+      // }
+      datePickerDiv: {
+        display: "flex",
+        flexDirection: "col"
+      },
+       container: {
+        display: 'flex',
+        flexWrap: 'wrap',
+        
+      },
+      textField: {
+        marginLeft: theme.spacing(1),
+        marginRight: theme.spacing(1),
+        width: 200,
+        border: "3px solid ##C7C"
+      },
 }))
 
 
@@ -69,8 +101,15 @@ const DatePicker = ({HomeworkTitle}) => {
         setOpen(false);
       };
 
+      // date state 
+      const [selectedDate, setSelectedDate] = useState(new Date().now);
+      // date state handler 
+      const handleDateChange = (date) => {
+        setSelectedDate(date);
+      }
         // useStyle
-        const {paper, modal, redSquare, greenSquare, icon, logoHolder, modalHeader} = useStyles()
+     
+          const {paper, modal, redSquare, greenSquare, icon, logoHolder, modalHeader, closeIcon, iconBtn, datePickerDiv, textField, container } = useStyles()
         
   return (
     <div>
@@ -91,24 +130,40 @@ const DatePicker = ({HomeworkTitle}) => {
     >
      
       <Fade in={open}>
+        {/* the paper of modal */}
         <div className={paper}>
+          {/* modal header */}
           <div className={modalHeader}>
           <div className={logoHolder}>
           <span className={redSquare}><SquareIcon className={icon} /></span>
           <span className={greenSquare}><SquareIcon className={icon} /></span>
+          <Typography variant="h6" >Class </Typography> 
           </div>
-          <Typography variant="h5" >hello</Typography> 
+          <div>
           </div>
-          <span></span>
-          <h2 id="transition-modal-title">Transition modal</h2>
-          <p id="transition-modal-description">react-transition-group animates me.</p>
+          <IconButton className={iconBtn}><CloseIcon className={closeIcon} /></IconButton>
+          </div>
+          {/* date picker of modal */}
+          <div className={datePickerDiv}>
+          <form className={container} noValidate>
+      <TextField
+        id="date"
+        label="Birthday"
+        type="date"
+        defaultValue="2017-05-24"
+        className={textField}
+        InputLabelProps={{
+          shrink: true,
+        }}
+      />
+    </form>
+          </div>
+
         </div>
       </Fade>
 
-      
     </Modal>
   </div>
-  )
-}
-
+    ) 
+      }
 export default DatePicker
